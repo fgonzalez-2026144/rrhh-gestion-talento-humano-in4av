@@ -27,6 +27,6 @@ replay_pid*
 
 
 
-src/org/gestiontalentoshumanos/system/config/Enviroment.java
+src/org/gestiontalenthumano/system/config/Enviroment.java
 dist/*
 build/*
