@@ -1,0 +1,156 @@
+/* ===========================================================
+   RRHH - Gestion de Talento Humano
+   Paleta: azul marino profundo + azul corporativo + acentos.
+   =========================================================== */
+
+.root {
+    -navy-900: #0E1830;
+    -navy-800: #14213D;
+    -navy-700: #1B2C55;
+    -blue-600: #2F6FED;
+    -blue-700: #1D4ED8;
+    -blue-100: #E8F0FE;
+    -cyan-500: #22D3EE;
+    -violet-500: #7C3AED;
+    -green-600: #16A34A;
+    -red-600:   #DC2626;
+    -slate-50:  #F4F7FC;
+    -slate-500: #64748B;
+    -slate-300: #D6DCE7;
+}
+
+.login-root {
+    -fx-background-color: #FFFFFF;
+}
+
+/* ---------- Panel izquierdo (marca) ---------- */
+.login-left-panel {
+    -fx-background-color:
+        radial-gradient(center 20% 15%, radius 65%, rgba(47,111,237,0.45), transparent),
+        radial-gradient(center 85% 90%, radius 55%, rgba(124,58,237,0.35), transparent),
+        linear-gradient(to bottom right, -navy-700, -navy-900);
+    -fx-padding: 40;
+}
+
+.login-logo-icon {
+    -fx-font-size: 46px;
+    -fx-text-fill: #FFFFFF;
+    -fx-effect: dropshadow(gaussian, rgba(34,211,238,0.55), 26, 0.3, 0, 0);
+}
+
+.login-brand-title {
+    -fx-font-size: 34px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #FFFFFF;
+}
+
+.login-brand-subtitle {
+    -fx-font-size: 16px;
+    -fx-text-fill: #CFE0FF;
+}
+
+/* Linea decorativa de acento bajo la marca */
+.login-brand-accent {
+    -fx-min-height: 4px;
+    -fx-max-height: 4px;
+    -fx-min-width: 90px;
+    -fx-max-width: 90px;
+    -fx-background-radius: 4px;
+    -fx-background-color: linear-gradient(to right, -cyan-500, -blue-600, -violet-500);
+}
+
+.login-brand-tagline {
+    -fx-font-size: 12px;
+    -fx-text-fill: #9FB2D6;
+    -fx-padding: 14 0 0 0;
+}
+
+/* ---------- Panel derecho (formulario) ---------- */
+.login-right-panel {
+    -fx-background-color: linear-gradient(to bottom, #FFFFFF, -slate-50);
+    -fx-padding: 40;
+}
+
+.login-form-box {
+    -fx-background-color: transparent;
+}
+
+.login-form-title {
+    -fx-font-size: 26px;
+    -fx-font-weight: bold;
+    -fx-text-fill: -navy-800;
+}
+
+.login-form-subtitle {
+    -fx-font-size: 13px;
+    -fx-text-fill: -slate-500;
+}
+
+.field-label {
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #334155;
+}
+
+.login-field, .form-field {
+    -fx-background-color: #FFFFFF;
+    -fx-border-color: -slate-300;
+    -fx-border-radius: 8px;
+    -fx-background-radius: 8px;
+    -fx-padding: 10 12;
+    -fx-font-size: 13px;
+    -fx-prompt-text-fill: #9AA6BC;
+}
+
+.login-field:focused, .form-field:focused {
+    -fx-border-color: -blue-600;
+    -fx-effect: dropshadow(gaussian, rgba(47,111,237,0.28), 10, 0.2, 0, 0);
+}
+
+/* ---------- Botones ---------- */
+.btn-primary {
+    -fx-background-color: linear-gradient(to right, -blue-600, #4C8DFF);
+    -fx-text-fill: #FFFFFF;
+    -fx-font-weight: bold;
+    -fx-font-size: 13px;
+    -fx-background-radius: 8px;
+    -fx-padding: 12 22;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(47,111,237,0.40), 14, 0.2, 0, 4);
+}
+
+.btn-primary:hover {
+    -fx-background-color: linear-gradient(to right, -blue-700, -blue-600);
+}
+
+.btn-secondary {
+    -fx-background-color: #FFFFFF;
+    -fx-text-fill: -navy-800;
+    -fx-border-color: -slate-300;
+    -fx-border-radius: 8px;
+    -fx-background-radius: 8px;
+    -fx-font-size: 13px;
+    -fx-padding: 12 22;
+    -fx-cursor: hand;
+}
+
+.btn-secondary:hover {
+    -fx-background-color: -blue-100;
+    -fx-border-color: -blue-600;
+    -fx-text-fill: -blue-700;
+}
+
+.login-error-label {
+    -fx-text-fill: -red-600;
+    -fx-font-size: 12px;
+    -fx-background-color: #FEECEC;
+    -fx-border-color: #F6BFBF;
+    -fx-border-radius: 6px;
+    -fx-padding: 8 10;
+    -fx-background-radius: 6px;
+}
+
+.login-footer {
+    -fx-font-size: 10px;
+    -fx-text-fill: #94A3B8;
+}
