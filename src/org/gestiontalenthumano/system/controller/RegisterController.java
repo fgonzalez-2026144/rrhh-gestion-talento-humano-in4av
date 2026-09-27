@@ -176,5 +176,5 @@ public class RegisterController {
         cbDepartamento.getSelectionModel().clearSelection();
         dpFechaContratacion.setValue(null);
         txtSalarioBase.clear();
-    }
+    } 
 }
