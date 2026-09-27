@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.collections.FXCollections?>
+<?import java.lang.String?>
+
+<VBox xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="org.gestiontalentoshumanos.system.controller.RegisterController"
+      styleClass="register-root" alignment="TOP_CENTER">
+
+    <VBox styleClass="register-card" maxWidth="620" spacing="20">
+
+        <Region styleClass="card-accent-bar" />
+
+        <VBox spacing="4">
+            <Label fx:id="lblPageTitle" text="Registrar Colaborador" styleClass="page-title" />
+            <Label fx:id="lblPageSubtitle" text="Completa la informacion del nuevo colaborador." styleClass="page-subtitle" />
+        </VBox>
+
+        <HBox>
+            <Label text="&#128100;  Datos personales" styleClass="section-title" />
+        </HBox>
+
+        <Label fx:id="lblFeedback" wrapText="true" styleClass="feedback-label" />
+
+        <GridPane hgap="18" vgap="14">
+            <columnConstraints>
+                <ColumnConstraints percentWidth="50" />
+                <ColumnConstraints percentWidth="50" />
+            </columnConstraints>
+
+            <VBox spacing="6" GridPane.columnIndex="0" GridPane.rowIndex="0">
+                <Label text="ID de empleado *" styleClass="field-label" />
+                <TextField fx:id="txtIdEmpleado" promptText="Ej. 1007" styleClass="form-field" />
+            </VBox>
+
+            <VBox spacing="6" GridPane.columnIndex="1" GridPane.rowIndex="0">
+                <Label text="Nombre completo *" styleClass="field-label" />
+                <TextField fx:id="txtNombreCompleto" promptText="Ej. Juan Perez Garcia" styleClass="form-field" />
+            </VBox>
+
+            <VBox spacing="6" GridPane.columnIndex="0" GridPane.rowIndex="1">
+                <Label text="Puesto laboral *" styleClass="field-label" />
+                <ComboBox fx:id="cbPuesto" promptText="Seleccionar puesto" maxWidth="Infinity" styleClass="form-field">
+                    <items>
+                        <FXCollections fx:factory="observableArrayList">
+                            <String fx:value="Analista" />
+                            <String fx:value="Desarrollador" />
+                            <String fx:value="Disenador" />
+                            <String fx:value="Asistente" />
+                            <String fx:value="Supervisor" />
+                            <String fx:value="Gerente" />
+                        </FXCollections>
+                    </items>
+                </ComboBox>
+            </VBox>
+
+            <VBox spacing="6" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                <Label text="Departamento *" styleClass="field-label" />
+                <ComboBox fx:id="cbDepartamento" promptText="Seleccionar departamento" maxWidth="Infinity" styleClass="form-field">
+                    <items>
+                        <FXCollections fx:factory="observableArrayList">
+                            <String fx:value="Finanzas" />
+                            <String fx:value="TI" />
+                            <String fx:value="Marketing" />
+                            <String fx:value="RRHH" />
+                            <String fx:value="Operaciones" />
+                            <String fx:value="Ventas" />
+                        </FXCollections>
+                    </items>
+                </ComboBox>
+            </VBox>
+
+            <VBox spacing="6" GridPane.columnIndex="0" GridPane.rowIndex="2">
+                <Label text="Fecha de contratacion *" styleClass="field-label" />
+                <DatePicker fx:id="dpFechaContratacion" maxWidth="Infinity" styleClass="form-field" />
+            </VBox>
+
+            <VBox spacing="6" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                <Label text="Salario base mensual (Q) *" styleClass="field-label" />
+                <TextField fx:id="txtSalarioBase" promptText="Ej. 8000.00" styleClass="form-field, form-field-numeric" />
+            </VBox>
+        </GridPane>
+
+        <HBox spacing="14" alignment="CENTER_RIGHT">
+            <Button fx:id="btnCancelar" text="&#10006;  Cancelar" styleClass="btn-secondary" onAction="#onCancelar" />
+            <Button fx:id="btnGuardar" text="&#128190;  Guardar" styleClass="btn-primary" onAction="#onGuardar" />
+        </HBox>
+    </VBox>
+</VBox>
